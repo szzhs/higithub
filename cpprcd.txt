@@ -1,0 +1,61 @@
+C++ 预处理
+
+#define  及#undef 
+--------------
+#define multiply( f1, f2 ) ( f1 * f2 )
+#define WIDTH       80
+#define LENGTH      ( WIDTH + 10 )
+-----------
+#error 
+
+#Error指令在编译时发出用户指定的错误消息，然后终止编译。
+
+语法 #errortoken-string
+
+#if !defined(__cplusplus)
+#error C++ compiler required.
+#endif
+
+--------------
+
+#if 
+#else 
+#ifdef 
+#ifndef 
+#elif 
+#endif 
+--------------
+#if DLEVEL > 5
+    #define SIGNAL  1
+    #if STACKUSE == 1
+        #define STACK   200
+    #else
+        #define STACK   100
+    #endif
+#else
+    #define SIGNAL  0
+    #if STACKUSE == 1
+        #define STACK   100
+    #else
+        #define STACK   50
+    #endif
+#endif
+#if DLEVEL == 0
+    #define STACK 0
+#elif DLEVEL == 1
+    #define STACK 100
+#elif DLEVEL > 5
+    display( debugptr );
+#else
+    #define STACK 200
+#endif
+
+--------------
+#import 
+
+#include 
+#using 
+
+#line 
+#pragma
+

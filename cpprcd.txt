@@ -58,4 +58,4 @@ C++ Ô¤´¦Àí
 
 #line 
 #pragma
-
+Is there chinese character lose ?
